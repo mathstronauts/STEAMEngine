@@ -15,13 +15,6 @@ if (operation == '**'):
 else:
     first_num = input('Please enter first integer: ')
     second_num = input('Please enter second integer: ')
-    
-#if (operation == '+' or operation == '-' or operation == '*' or operation == '/'):
-#    first_num = input('Please enter first integer: ')
-#    second_num = input('Please enter second integer: ')
-#else:
-#    base = input('Please enter base integer: ')
-#    exp = input('Please enter exponent: ')
 
 if(operation == '+'):    
     #sum the two numbers
