@@ -1,6 +1,7 @@
 # Advanced SEV and NEXUS - List Demo_________________________________________
 
-from random import *
+import random
+import random
 
 # sandwich lists
 bread = ['white', 'whole wheat']  # index positions: white = 0, whole wheat = 1
@@ -21,9 +22,9 @@ bread_size = len(bread) #get the size of the bread list
 meat_size = len(meat) #get the size of the meat list
 veggie_size = len(veggie)#get the size of the veggie list
 
-bread_idx = randint(0, bread_size - 1)
-meat_idx = randint(0, meat_size - 1)
-veggie_idx = randint(0, veggie_size - 1)
+bread_idx = random.randint(0, bread_size - 1)
+meat_idx = random.randint(0, meat_size - 1)
+veggie_idx = random.randint(0, veggie_size - 1)
 
 # message to users
 selected_bread = bread[bread_idx]

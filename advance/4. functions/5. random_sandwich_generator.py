@@ -12,6 +12,7 @@ bread = ['white', 'whole wheat']  # index positions: white = 0, whole wheat = 1
 meat = ['chicken', 'salami', 'bacon', 'tuna'] # index: chicken = 0, salami = 1, bacon = 2, tuna = 3
 veggie = ['lettuce', 'tomato', 'onions', 'pickles', 'peppers']
 
+
 # message to users
 print("Welcome to Random Sandwich Generator! We have the following selections: ")
 print("Breads:", bread)  # print all the items in the list by entering the list name
