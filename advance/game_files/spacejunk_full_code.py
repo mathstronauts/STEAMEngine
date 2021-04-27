@@ -145,17 +145,17 @@ def updateLasers():
     global score, lasers
     for laser in lasers:  # for each laser in the lasers list 
         laser.x += -5  # lasers moving towards the left, so negative x direction
+        collision_debris = debris.colliderect(laser)
+        collision_satellite = satellite.colliderect(laser)
         # remove laser if moves off screen
-        if laser.right < 0:
+        if laser.right < 0 or collision_debris == 1 or collision_satellite == 1:
             lasers.remove(laser)
         # check for collisions
-        if debris.colliderect(laser) == 1:
-            lasers.remove(laser)
+        if collision_debris == 1:
             debris.topright = (randint(-500, -50), randint(SCOREBOX_HEIGHT, HEIGHT - debris.height))
             score += 5
             sounds.explosion.play()
-        if satellite.colliderect(laser) == 1:
-            lasers.remove(laser)
+        if collision_satellite == 1:
             satellite.topright = (randint(-500, -50), randint(SCOREBOX_HEIGHT, HEIGHT - satellite.height))
             score += -5
             sounds.explosion.play()
